@@ -58,6 +58,9 @@ export class MetaSenderComponent implements OnInit {
   }
 
   async sendCoin() {
+
+    alert("send coin");
+
     if (!this.MetaCoin) {
       this.setStatus('Metacoin is not loaded, unable to send transaction');
       return;
