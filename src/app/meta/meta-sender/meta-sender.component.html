@@ -9,6 +9,7 @@
 
     <p>Commulated Prize <span id="balance">{{model.commulatedPrize}}</span> </p>
     <p>Previous winners games: <span id="balance">{{model.previousWinnersGames}}</span> </p>
+    <p>Next game time: <span id="balance">{{model.nextGameTime}}</span> </p>
   </mat-card-content>
 </mat-card>
 
@@ -22,5 +23,6 @@
       <input type="text" matInput id="receiver" placeholder="Receiver Address" (change)="setReceiver($event)">
     </mat-form-field>
     <button mat-button id="send" (click)="postGame()">Send MetaCoin</button>
+    <button mat-button id="getTime" (click)="refreshBalance()">Update Time</button>
   </mat-card-content>
 </mat-card>

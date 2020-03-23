@@ -138,6 +138,8 @@ export class MetaSenderComponent implements OnInit {
   }
 
   async refreshBalance() {
+
+    alert(Date.now());
     //console.log('Refreshing balance');
     console.log("Updating Prize");
 
@@ -162,8 +164,12 @@ export class MetaSenderComponent implements OnInit {
       const previousWinnersGames = await deployedLottery.showWinnersGame.call();
       //TODO parse it
       console.log('Last winners games array: ' + previousWinnersGames);
-      this.model.commulatedPrize = prizeBalance;
-      this.model.previousWinnersGames = previousWinnersGames
+      this.model.previousWinnersGames = previousWinnersGames;
+
+      const nextGameTime = await deployedLottery.getTimeNextGame.call();
+      console.log('Next game time: ' + nextGameTime);
+      this.model.nextGameTime = nextGameTime;
+
     } catch (e) {
       console.log(e);
       this.setStatus('Error getting prize balance; see log.');
