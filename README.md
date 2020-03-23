@@ -16,6 +16,6 @@ $ ng serve --open
 - [Angular Truffle Box](https://www.trufflesuite.com/boxes/angular-truffle-box)
 
 #
-#### Thiago ALMEIDA - Oualid KHAOUNI - Szabó CSABA - Tomás - Gabriel FORIEN
+#### Thiago ALMEIDA - Oualid LKHAOUNI - Szabó CSABA - Tomás - Gabriel FORIEN
 #### INSA Lyon 4TC
 ![Logo INSA Lyon](https://upload.wikimedia.org/wikipedia/commons/b/b9/Logo_INSA_Lyon_%282014%29.svg)
