@@ -7,7 +7,7 @@
       </mat-select>
     </mat-form-field>
 
-    <p>You have <span id="balance">{{model.balance}}</span> META</p>
+    <p>You have <span id="balance">{{model.commulatedPrize}}</span> META</p>
   </mat-card-content>
 </mat-card>
 
@@ -20,8 +20,6 @@
     <mat-form-field class="address-field">
       <input type="text" matInput id="receiver" placeholder="Receiver Address" (change)="setReceiver($event)">
     </mat-form-field>
-    <button mat-button id="send" (click)="sendCoin()">Send MetaCoin</button>
+    <button mat-button id="send" (click)="postGame()">Send MetaCoin</button>
   </mat-card-content>
 </mat-card>
-
-

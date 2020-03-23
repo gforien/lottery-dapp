@@ -24,13 +24,14 @@
     "@angular/platform-browser-dynamic": "8.2.0",
     "@angular/platform-server": "8.2.0",
     "@angular/router": "8.2.0",
+    "@truffle/contract": "^4.0.33",
     "core-js": "2.5.7",
     "ethers": "^4.0.37",
     "node-sass": "4.12.0",
     "rxjs": "^6.5.3",
-    "@truffle/contract": "^4.0.33",
     "tslib": "^1.10.0",
-    "web3": "1.2.1",
+    "web3": "^1.2.1",
+    "web3-eth": "^1.2.6",
     "zone.js": "0.9.1"
   },
   "devDependencies": {
