@@ -159,6 +159,11 @@ export class MetaSenderComponent implements OnInit {
       const prizeBalance = await deployedLottery.getComulatedPrize.call();
       console.log('Found prize balance: ' + prizeBalance);
       this.model.commulatedPrize = prizeBalance;
+      const previousWinnersGames = await deployedLottery.showWinnersGame.call();
+      //TODO parse it
+      console.log('Last winners games array: ' + previousWinnersGames);
+      this.model.commulatedPrize = prizeBalance;
+      this.model.previousWinnersGames = previousWinnersGames
     } catch (e) {
       console.log(e);
       this.setStatus('Error getting prize balance; see log.');
