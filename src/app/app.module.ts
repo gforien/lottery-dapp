@@ -15,6 +15,9 @@ import {
   MatToolbarModule
 } from '@angular/material';
 
+// import the lottery component
+import { LotteryModule } from './lottery/lottery.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -30,7 +33,8 @@ import {
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    MetaModule
+    MetaModule, 
+    LotteryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

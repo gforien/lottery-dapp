@@ -1,0 +1,40 @@
+<div id="bet-container">
+    <mat-grid-list cols="8" rowHeight="50px">
+        <mat-grid-tile *ngFor="let number of numbers" (click)="onSelect(number)">{{ number }}</mat-grid-tile>
+    </mat-grid-list>
+    
+    <mat-card id="selection">{{ selected_numbers.toString() }}</mat-card>
+    
+    <button id="rm-button" mat-raised-button color="warn" (click)="removeBet()">Remove selection</button>
+
+    <button id="bet-button" mat-raised-button color="primary" (click)="makeBet()">Make a bet!</button>    
+</div>
+
+
+
+
+<div id="info-container">
+    
+    <mat-card id="get-price">
+        <h3>Price:</h3> {{ price }} ETH
+    </mat-card>
+
+
+    <mat-card id="next-game">
+        <h3>Next Game:</h3> {{ nextGameTime | date:'medium'}}
+    </mat-card>
+
+
+    <mat-list id="prev-winners" role="list">
+        <mat-list-item role="listitem">
+            <h3>Previous Winners:</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+        
+        <mat-list-item *ngFor="let winner of prevWinners" role="listitem">
+            {{ winner | lowercase}}
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+      
+</div>

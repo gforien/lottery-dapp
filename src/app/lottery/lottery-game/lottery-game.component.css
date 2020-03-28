@@ -1,0 +1,59 @@
+/*-----------------------Left Side----------------------------------*/
+#bet-container {
+    margin-top: 10px;
+    display: inline-flexbox;
+    float: left;
+    width: 50%;
+  }
+  
+  
+  mat-grid-tile {
+    background: lightblue;
+  }
+  
+  
+  #selection {
+    margin-top: 20px;
+  }
+    
+  #rm-button {
+    display: flexbox;
+    float: left;
+    margin-top: 20px;
+  }
+  
+  #bet-button {
+    display: flexbox;
+    float: right;
+    margin-top: 20px;
+  }
+  
+  /*-----------------------Right Side----------------------------------*/
+  
+  #info-container {
+    margin-top: 10px;
+    width: 50%;
+    display: inline-flexbox;
+    float: right;
+  }
+  
+  #get-price {
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+  }
+  
+  
+  #next-game {
+    margin-top: 100px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+  }
+  
+  #prev-winners {
+    margin-top: 120px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+  }

@@ -1,15 +1,15 @@
 {
   "contractName": "SafeMath",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":\"SafeMath\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":{\"keccak256\":\"0x575c3e08dcbda791c7fbcdc37d59aaf19c1633e47573f413f2f34435b7ad111a\",\"urls\":[\"bzzr://0b213e23ecf8b16fc9dbeb9f7c7c1da49965ff68c7a7feabb6ea0e54c089f3f8\"]}},\"version\":1}",
-  "bytecode": "0x604c6023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058204a34b50b6f1c1475762851b31632500e3a00e30f5fe185f33a6d04f7bfac35420029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058204a34b50b6f1c1475762851b31632500e3a00e30f5fe185f33a6d04f7bfac35420029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/Lottery.sol\":\"SafeMath\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/Lottery.sol\":{\"keccak256\":\"0x575c3e08dcbda791c7fbcdc37d59aaf19c1633e47573f413f2f34435b7ad111a\",\"urls\":[\"bzz-raw://ed66a8c7f02dd452039fc20caee86c53e61d5161bfceac8d2a70c0dc9873533c\",\"dweb:/ipfs/QmUmXUWcfUEaEuAzVohTwpAVr44ZR9dTEXPBEqSB4XZEQz\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820b97b1cb013bfbafa8b5dcb72bc3af6169dcdaa0e37bbebbabb003e0c164ed4bb64736f6c63430005100032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820b97b1cb013bfbafa8b5dcb72bc3af6169dcdaa0e37bbebbabb003e0c164ed4bb64736f6c63430005100032",
   "sourceMap": "25:1787:1:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "25:1787:1:-;;;;;;;;",
   "source": "pragma solidity ^0.5.1;\n\nlibrary SafeMath {\n\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\n        uint256 c = a + b;\n        require(c >= a, \"SafeMath: addition overflow\");\n\n        return c;\n    }\n\n\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\n        return sub(a, b, \"SafeMath: subtraction overflow\");\n    }\n\n\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b <= a, errorMessage);\n        uint256 c = a - b;\n\n        return c;\n    }\n\n\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        uint256 c = a * b;\n        require(c / a == b, \"SafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\n        return div(a, b, \"SafeMath: division by zero\");\n    }\n\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        // Solidity only automatically asserts when dividing by 0\n        require(b > 0, errorMessage);\n        uint256 c = a / b;\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\n\n        return c;\n    }\n\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\n        return mod(a, b, \"SafeMath: modulo by zero\");\n    }\n\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b != 0, errorMessage);\n        return a % b;\n    }\n}\n\ncontract Ownable {\n\n    address public owner = msg.sender;\n    // adress zero = 0x0000000000000000000000000000000000000000;\n    modifier onlyOwner {\n        require(msg.sender == owner, \"only owner can execute this\");\n        _;\n    }\n\n    function transferOwnership(address _newOwner) public onlyOwner {\n        owner = _newOwner;\n    }\n}\n\n\ncontract Lottery is Ownable{\n\n    using SafeMath for uint;\n\n    uint price = 1000000000000000000; //TODO change it  // 1 ether =  10000000000000000000 wei\n    uint fee = 20000000000000000 ; // 2% fee\n\n    uint[qntNumbers] winnerGame ;\n\n    //winnerGame = [1,2,3,4,5,6,7,8];\n\n    //[7,15,18,19,29,30,46,50]  for 60 nummbers\n     //[6,7,9,10,11,15,18,19] for 20\n     //[2,10,18,19,20,22,27,29] for 32\n\n    uint constant qntNumbers  = 8;\n    uint constant numberMax = 32; //TODO make the caculations and change it\n\n    uint timerDelay = 45; //60*60*23; //23h\n    uint lastGameTime= now;\n\n    //a game is 8 numbers of the array: if array.lenght == 16, nbGames == 2\n    mapping(address=>uint[]) addressToGame;\n    address payable[] players;\n    address payable[]  winners;\n\n    uint Prize;\n    uint ownerReward;\n\n    uint[] winnersGameList;\n\n\n\n    function isNewPlayer(address _address) private view returns(bool){\n        //address NewPlayer = msg.sender;\n\n        for (uint i=0;i<players.length;i++){\n            if ( players[i]==_address){\n\n                return false;\n            }\n        }\n        return true;\n\n\n    }\n\n    event printInt(uint integer);\n    event printBool(bool boolean);\n\n    event gamePosted(uint[qntNumbers] _numbers);\n\n\n    //TODO make a test for multiple games\n    function postGame(uint[qntNumbers] memory _numbers) public payable costs(price) returns (uint[] memory){\n\n        Prize +=price-fee;\n        ownerReward = address(this).balance - Prize;\n\n        assert(address(this).balance >= Prize);\n\n        address payable NewPlayer = msg.sender;\n        bool _isNewPlayer = isNewPlayer(NewPlayer);\n\n\n\n        emit printBool(_isNewPlayer);\n\n        if (_isNewPlayer){\n\n            players.push(NewPlayer);\n            addressToGame[NewPlayer] = _numbers;\n\n        }else{\n\n            uint[] storage olderGames = addressToGame[NewPlayer];\n\n                //uint totalNumbers = olderGames.length;\n\n                //emit printInt(totalNumbers);\n\n                for (uint i=0;i<qntNumbers;i++){\n\n                    olderGames.push(_numbers[i]);\n\n                    }\n\n\n             }\n\n        emit gamePosted(_numbers);\n\n        //return _isNewPlayer;\n\n        if ( getTimeNextGame()==0){\n\n            lastGameTime = now;\n\n            playRound();\n\n        }\n\n\n        return addressToGame[NewPlayer];\n\n    }\n\n\n\n    //TODO the entiry function\n    function getEntropy() private returns(uint){\n\n        return 1;\n\n    }\n\n\n\n    function getWinnerGame() public returns(uint[qntNumbers] memory){\n\n\n\n\n        bytes4[8] memory x = [bytes4(0) , 0 ,0,0,0,0,0,0 ];\n\n        uint entropy = getEntropy();\n        /*uint blockNumber = block.number;\n        bytes32 blockHash1 = blockhash(blockNumber-1);\n        bytes32 blockHash6 = blockhash(blockNumber-6);\n        bytes32 blockHash13 = blockhash(blockNumber-13);*/\n\n        bytes32 hash = keccak256(abi.encodePacked(entropy));//,ListWinners,games,blockHash1,blockHash6,blockHash13));\n        //return hash;\n\n        assembly {\n            mstore(x, hash)\n            mstore(add(x, 28), hash)\n            mstore(add(x, 56), hash)\n            mstore(add(x, 84), hash)\n            mstore(add(x, 112), hash)\n            mstore(add(x, 140), hash)\n            mstore(add(x, 168), hash)\n            mstore(add(x, 196), hash)\n        }\n\n        uint n0 = uint32 (x[0]);\n        n0 = n0%numberMax;\n        uint n1 = uint32 (x[1]);\n        n1 = n1%numberMax;\n        uint n2 = uint32 (x[2]);\n        n2 = n2%numberMax;\n        uint n3 = uint32 (x[3]);\n        n3 = n3%numberMax;\n        uint n4 = uint32 (x[4]);\n        n4 = n4%numberMax;\n        uint n5 = uint32 (x[5]);\n        n5 = n5%numberMax;\n        uint n6 = uint32 (x[6]);\n        n6 = n6%numberMax;\n        uint n7 = uint32 (x[7]);\n        n7 = n7%numberMax;\n\n        uint[qntNumbers] memory tabNumbers = [n0,n1,n2,n3,n4,n5,n6,n7];\n\n        quickSort(tabNumbers,0,tabNumbers.length -1);\n\n        removeDoubles(tabNumbers);\n\n        winnerGame = tabNumbers;\n\n        //payer();\n\n        lastGameTime = now;\n\n        return winnerGame;\n\n\n\n    }\n\n    function removeDoubles(uint[qntNumbers] memory tab) private{\n\n        bool a=true;\n        bool b=true;\n        bool c=true;\n        bool d=true;\n\n\n            for (uint i=0;i<tab.length;i++){\n\n                if(tab[0]==0){\n                    tab[0]=numberMax;\n                }\n\n                if (tab[i]> numberMax){\n                    tab[i] = tab[i]%numberMax;\n                    b=false;\n                }\n\n                if ( (i+1 < tab.length)&& (tab[i]==tab[i+1])){\n\n                    tab[i+1]= tab[i+1] + 1;\n                    c=false;\n               }\n            }\n\n            if(a&&b&&c&&d){\n                quickSort(tab,0,tab.length -1);\n                //emit tabCheck(tab);\n                return;\n            }\n\n            quickSort(tab,0,tab.length -1);\n\n            removeDoubles(tab);\n\n    }\n\n    function quickSort(uint[qntNumbers] memory tab, uint left, uint right) private {\n        uint i = left;\n        uint j = right;\n        uint mid = tab[left + (right - left) / 2];\n        while (i <= j) {\n            while (tab[i] < mid) i++;\n            while (mid < tab[j]) j--;\n            if (i <= j) {\n                (tab[i], tab[j]) = (tab[j], tab[i]);\n                i++;\n                j--;\n            }\n        }\n        if (left < j)\n            quickSort(tab, left, j);\n        if (i < right)\n            quickSort(tab, i, right);\n\n    }\n\n    /*function setWinnerGameeMannually(uint[qntNumbers] memory _winnerGame) public onlyOwner{\n\n        winnerGame = _winnerGame;\n    }*/\n\n    function checkIfGameIsWin(uint[qntNumbers] memory _winnerGame ,uint[] memory _gameArray, uint _start,uint _end) private returns(bool){\n\n\n\n\n        require( _end -_start==qntNumbers-1,\"not good quantity of numbers\");\n        require( (_end+1)%8 == 0 , \"not good indexes _start and _end\");\n\n        //require( _gameArray)\n\n\n        for(uint i=_start;i<=_end;i++){\n\n            if (_winnerGame[i-_start]!=_gameArray[i]){\n\n                return false;\n\n            }\n\n\n        }\n        return true;\n\n    }\n\n    function searchWinGameInArray(uint[qntNumbers] memory __winnerGame, uint[] memory __gameArray ) private returns(bool){\n\n        uint nbGamesTotal = __gameArray.length/qntNumbers;\n\n        for (uint n = 0;n<nbGamesTotal;n++){\n\n            uint start = qntNumbers*n;\n            uint end = qntNumbers*n+qntNumbers-1;\n\n            if (checkIfGameIsWin(__winnerGame,__gameArray,start,end)){\n\n                return true;\n\n\n            }\n\n\n        }\n        return false;\n\n    }\n\n\n    //TODO run the test to see if the winners are deleted from players list\n    function findWinners() private {// returns (address payable[] memory){\n\n        winnerGame = getWinnerGame();\n\n        for(uint i=0;i<winnerGame.length;i++){\n\n            winnersGameList.push(winnerGame[i]);\n\n        }\n\n\n\n        for(uint i=0; i<players.length;i++){\n\n            address payable currentPlayer = players[i];\n            uint[] storage gameListCurrentPlayer = addressToGame[currentPlayer];\n\n            if(searchWinGameInArray(winnerGame,gameListCurrentPlayer)){\n\n                //pushes the winner to the wining list\n                winners.push(currentPlayer);\n\n            }\n\n            //delete the player from the list of player, even if he doesnt win\n            delete addressToGame[currentPlayer];\n\n\n        }\n\n        //we could remove the return, but its easier to debug like this\n        //return winners;\n\n    }\n\n\n    function payerWinners() private returns (uint) {\n\n        uint totalWinners = winners.length;\n\n        if (totalWinners == 0){\n\n            return 0;\n\n        }else{\n\n            uint individualPrize = Prize/totalWinners;\n            Prize = 0;\n\n            for(uint i=0;i<totalWinners;i++){\n\n                winners[i].transfer(individualPrize);\n                delete winners[i];\n\n\n            }\n\n            return individualPrize;\n\n\n        }\n\n\n\n    }\n\n    function playRound() private {\n\n        findWinners();\n        payerWinners();\n\n\n    }\n\n   modifier costs(uint amount){\n        require(msg.value >= amount, \"insuficient amount\");\n        _;\n    }\n\n\n    function getTimeNextGame() public view returns (uint){\n\n        uint time = timerDelay + lastGameTime - now ;\n        if (time>timerDelay){\n            time=0;\n        }\n\n        return time;\n    }\n\n    function getComulatedPrize() public view returns (uint){\n        //return address(this).balance;\n        return Prize;\n    }\n\n    function getOwnerReward() public view returns (uint){\n        //return address(this).balance;\n        return ownerReward;\n    }\n\n    function withdrawAsOwner() public onlyOwner{\n\n        uint toTransfer = ownerReward;\n        ownerReward = 0;\n\n        msg.sender.transfer(toTransfer);\n\n\n    }\n\n    function showWinnersGame() public view returns(uint[] memory){\n\n        return winnersGameList;\n\n    }\n\n\n}\n",
-  "sourcePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
+  "sourcePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/Lottery.sol",
   "ast": {
-    "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
+    "absolutePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/Lottery.sol",
     "exportedSymbols": {
       "Lottery": [
         1236
@@ -5959,24 +5959,6 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5284:4:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "x": {
-                        "declaration": 460,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "5276:1:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "hash": {
-                        "declaration": 479,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "5210:4:1",
                         "valueSize": 1
                       }
@@ -5987,6 +5969,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5202:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "hash": {
+                        "declaration": 479,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5284:4:1",
                         "valueSize": 1
                       }
                     },
@@ -6027,11 +6018,11 @@
                       }
                     },
                     {
-                      "hash": {
-                        "declaration": 479,
+                      "x": {
+                        "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5398:4:1",
+                        "src": "5276:1:1",
                         "valueSize": 1
                       }
                     },
@@ -6050,6 +6041,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5313:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "hash": {
+                        "declaration": 479,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5398:4:1",
                         "valueSize": 1
                       }
                     },
@@ -15821,7 +15821,7 @@
     "src": "0:11059:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
+    "absolutePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/Lottery.sol",
     "exportedSymbols": {
       "Lottery": [
         1236
@@ -21771,24 +21771,6 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5284:4:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "x": {
-                        "declaration": 460,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "5276:1:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "hash": {
-                        "declaration": 479,
-                        "isOffset": false,
-                        "isSlot": false,
                         "src": "5210:4:1",
                         "valueSize": 1
                       }
@@ -21799,6 +21781,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5202:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "hash": {
+                        "declaration": 479,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5284:4:1",
                         "valueSize": 1
                       }
                     },
@@ -21839,11 +21830,11 @@
                       }
                     },
                     {
-                      "hash": {
-                        "declaration": 479,
+                      "x": {
+                        "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5398:4:1",
+                        "src": "5276:1:1",
                         "valueSize": 1
                       }
                     },
@@ -21862,6 +21853,15 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5313:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "hash": {
+                        "declaration": 479,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5398:4:1",
                         "valueSize": 1
                       }
                     },
@@ -31634,11 +31634,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.16",
-  "updatedAt": "2020-03-23T10:49:51.213Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-28T19:38:53.872Z",
   "devdoc": {
     "methods": {}
   },
