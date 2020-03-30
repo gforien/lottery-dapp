@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
+import {UtilModule} from '../util/util.module';
+import {
   MatGridListModule,
   MatCardModule,
   MatButtonModule,
-  MatListModule 
-} from '@angular/material'; 
+  MatListModule
+} from '@angular/material';
 
 
 import { LotteryGameComponent } from './lottery-game/lottery-game.component';

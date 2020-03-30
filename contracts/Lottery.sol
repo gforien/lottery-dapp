@@ -458,6 +458,12 @@ contract Lottery is Ownable{
         return time;
     }
 
+    function getLastGameTime() public view returns(uint){
+
+        return lastGameTime;
+
+    }
+
     function getComulatedPrize() public view returns (uint){
         //return address(this).balance;
         return Prize;
