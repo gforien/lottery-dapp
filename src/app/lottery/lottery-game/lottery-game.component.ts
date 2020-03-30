@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Web3Service} from '../../util/web3.service';
+import { Web3Service } from '../../util/web3.service';
 import { MatSnackBar } from '@angular/material';
 
 declare let require: any;
@@ -15,14 +15,19 @@ export class LotteryGameComponent implements OnInit {
   accounts: string[];
   Lottery: any;
 
-  //TODO 1 to 32
-  numbers = Array.from(Array(32).keys());  //create 32 numbers (0,...,31) that the user can choose from
-  selected_numbers = [];
+  numbers = Array.from(Array(32)).map((e,i) => ++i)  //create 32 numbers (1,...,32) that the user can choose from
+  selected_numbers: number[] = [];
   account_selected = null;
 
-  prize = 0;
-  nextGameTime = 0;
-  prevWinners = [];
+  prize: number = 0;
+  lastGameTime: number = 0;
+  nextGameTime: number = 0;
+  countdown: string = "00 d 00 h 00 m 00 s";
+  prevWinners: string[];
+
+  ownership: boolean = false; 
+  owner_balance: number = 0;
+
 
 
   constructor(private web3Service: Web3Service, private matSnackBar: MatSnackBar) {
@@ -40,14 +45,18 @@ export class LotteryGameComponent implements OnInit {
         this.Lottery.deployed().then(deployed => {
           console.log("Lottery init",deployed);
           this.getComulatedPrize();
+          this.getLastGameTime();
           this.getNextGameTime();
           this.getPrevWinners();
+          this.checkOwnership();
           deployed.gamePosted({}, (err, ev) => {
             console.log('game posted event came in, refreshing balance');
             //this.refreshBalance();
             this.getComulatedPrize();
+            this.getLastGameTime();
             this.getNextGameTime();
             this.getPrevWinners();
+            this.checkOwnership();
           });
         });
 
@@ -55,6 +64,8 @@ export class LotteryGameComponent implements OnInit {
 
   }
 
+
+  
   watchAccount() {
     this.web3Service.accountsObservable.subscribe((accounts) => {
       this.accounts = accounts;
@@ -66,10 +77,14 @@ export class LotteryGameComponent implements OnInit {
     });
   }
 
-  onSelect(number): void {
-    console.log(number);
-
-    if(this.selected_numbers.length < 8){
+  onSelect($event, number) {
+    
+    // only append number to selection if less than 8 numbers have been selected already && the number hasn't been selected before
+    if(this.selected_numbers.length < 8 && !this.selected_numbers.includes(number)){
+      
+      // update the background color for selected numbers
+      $event.target.style.background = 'gray';
+      
       this.selected_numbers.push(number);
     }
   }
@@ -78,9 +93,8 @@ export class LotteryGameComponent implements OnInit {
     this.matSnackBar.open(status, null, {duration: 3000});
   }
 
-  makeBet(): void {
+  makeBet() {
 
-    //TODO check if the numbers are differents
     if(this.selected_numbers.length == 8){
       console.log("makeBet()");
       console.log(this.selected_numbers);
@@ -90,6 +104,18 @@ export class LotteryGameComponent implements OnInit {
       console.log("Please choose 8 numbers before making a bet!");
     }
   }
+
+  removeBet() {
+    this.selected_numbers = [];
+
+    var numbers: any = document.getElementsByClassName("mat-figure");
+    for (let number of numbers) {
+      number.style.background = 'lightblue';
+    }
+
+  }
+
+
 
   async postGame(){
 
@@ -124,18 +150,6 @@ export class LotteryGameComponent implements OnInit {
 
   }
 
-  removeBet(): void {
-    this.selected_numbers = [];
-  }
-
-  getComulatedPrice(): void {
-    //this function gets called on ngOnInit and sets the comulated price
-    console.log("print price");
-
-    this.prize = 1;
-  }
-
-
   async getComulatedPrize(){
     console.log("geting commulated prize");
     let prizeBalance=31;
@@ -154,40 +168,89 @@ export class LotteryGameComponent implements OnInit {
       console.log(e);
       this.setStatus('Error getting prize balance; see log.');
     }
-    this.prize = prizeBalance.toString()/1000000000000000000;
+    
+    this.prize = Math.abs(prizeBalance/1000000000000000000);
 
+
+  }
+
+  async getLastGameTime(){
+    // gets called on ngOnInit and sets the last game time
+    // timestamp in milliseconds, e.g.:
+    // this.lastGameTime = 1616949982000;
+    try {
+
+      const deployedLottery = await this.Lottery.deployed();
+
+      //retrieves the time in seconds and gets converted to milliseconds (* 1000) to work for the view
+      this.lastGameTime = await deployedLottery.getLastGameTime.call() * 1000;
+      console.log('Last game time: ' + this.lastGameTime);
+      
+
+    } catch (e) {
+      console.log(e);
+      this.setStatus('Error getting last time; see log.');
+    }
 
   }
 
   async getNextGameTime(){
-    //this function gets called on ngOnInit and sets the next game time
-    //timestamp in milliseconds
-    //this.nextGameTime = 1616949982000;
+    // gets called on ngOnInit and sets the next game time
+    // timestamp in milliseconds
     try {
 
+      //const deployedLottery = await this.Lottery.deployed();
+      //const nextGameTime = await deployedLottery.getNextGameTime.call();
+      //console.log('Next game time: ' + nextGameTime);
 
-      const deployedLottery = await this.Lottery.deployed();
+
+      //TODO get 'real' next game time
+      this.nextGameTime = 1585764812000;  // equal to 4/1/2020, 8:13:32 PM
 
 
-      const nextGameTime = await deployedLottery.getLastGameTime.call();
-      console.log('Next game time: ' + nextGameTime);
+      let delta: number;
 
-      //TODO make a count down
-      this.nextGameTime = Date(nextGameTime);
+      let delta_days: number;
+      let delta_hours: number;
+      let delta_min: number;
+      let delta_sec: number;
+
+      setInterval(() => {
+
+        // delta of dates in milliseconds
+        delta = this.nextGameTime - Date.now();
+
+
+        //calculate delta of days 
+        delta_days = Math.floor(delta / 1000 / 60 / 60 / 24);
+
+        //calculate the hours of the remaining difference between delta and delta_days
+        delta_hours = Math.floor(delta / 1000 / 60 / 60 ) - (delta_days*24);
+
+        //calculate the min of the remaining difference between delta and delta_hours
+        delta_min = Math.floor(delta / 1000 / 60 ) - (delta_days*24*60 + delta_hours*60);
+
+        //calculate the sec of the remaining difference between delta and delta_min
+        delta_sec = Math.floor(delta / 1000) - (delta_days*24*60*60 + delta_hours*60*60 + delta_min*60);
+
+
+        // set final countdown string
+        this.countdown =  delta_days + " d "; 
+        this.countdown += delta_hours + " h "; 
+        this.countdown += delta_min + " m ";
+        this.countdown += delta_sec + " s ";
+
+      }, 1000);
+      
 
     } catch (e) {
       console.log(e);
-      this.setStatus('Error getting next time; see log.');
+      this.setStatus('Error getting last time; see log.');
     }
-
-
 
   }
 
-
-
-
-async  getPrevWinners(){
+  async getPrevWinners(){
     //this function gets called on ngOnInit and sets the previous winners
     this.prevWinners = []
 
@@ -231,5 +294,22 @@ async  getPrevWinners(){
 
   }
 
+  async checkOwnership() {
+    // TODO check if user is owner of an account
+    // global ownership var is set to true in order to display ownership relevant information
+    
+    //this.ownership = true;
+
+    // only if ownership was set to true, call the getBalance function
+    if (this.ownership) { this.getBalance(); }
+  }
+
+  async getBalance() {
+    console.log("getBalance()");   
+  }
+
+  async withdrawal() {
+    console.log("withdrawal()");   
+  }
 
 }

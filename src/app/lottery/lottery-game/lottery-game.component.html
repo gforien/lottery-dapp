@@ -1,6 +1,10 @@
 <div id="bet-container">
     <mat-grid-list cols="8" rowHeight="50px">
-        <mat-grid-tile *ngFor="let number of numbers" (click)="onSelect(number)">{{ number }}</mat-grid-tile>
+        <mat-grid-tile 
+            *ngFor="let number of numbers" 
+            (click)="onSelect($event, number)">
+            {{ number }}
+        </mat-grid-tile>
     </mat-grid-list>
 
     <mat-card id="selection">{{ selected_numbers.toString() }}</mat-card>
@@ -15,19 +19,30 @@
 
 <div id="info-container">
 
-    <mat-card id="get-price">
-        <h3>Commulated Prize:</h3> {{ prize }} ETH
+    <mat-card id="get-prize">
+        <h3>Prize:</h3> {{ prize }} ETH
     </mat-card>
 
 
+    <mat-card id="last-game">
+        <h3>Last Game:</h3> {{ lastGameTime | date:'medium'}}
+    </mat-card>
+
+
+    <!--
     <mat-card id="next-game">
-        <h3>Next Game:</h3> {{ nextGameTime | date:'medium'}}
+        <h3>Next Game:</h3> {{ nextGameTime | date:'medium' }}
+    </mat-card>
+    -->
+
+    <mat-card id="next-game">
+        <h3>Next Game:</h3> {{ countdown }} 
     </mat-card>
 
 
     <mat-list id="prev-winners" role="list">
         <mat-list-item role="listitem">
-            <h3>Previous Winners Games:</h3>
+            <h3>Previous Winners:</h3>
             <mat-divider></mat-divider>
         </mat-list-item>
 
@@ -36,5 +51,19 @@
             <mat-divider></mat-divider>
         </mat-list-item>
     </mat-list>
+
+</div>
+
+
+
+<!-- This view only gets displayed if user is owner of an account-->
+<div id="owner-container" *ngIf="ownership">
+
+    <mat-card id="owner-balance">
+        <h3>Balance:</h3> {{ owner_balance }} ETH
+    </mat-card>
+
+    <button id="withdrawal-button" mat-raised-button color="primary" (click)="withdrawal()">Withdrawal</button>
+
 
 </div>

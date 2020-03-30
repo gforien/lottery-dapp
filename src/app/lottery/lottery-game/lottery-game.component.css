@@ -27,8 +27,29 @@
     float: right;
     margin-top: 20px;
   }
+
+/*----- Only visible for Account Owners -----*/
+#owner-container {
+  margin-top: 200px;
+  display: flexbox;
+  float: left;
+  width: 50%;
+}
+
+#owner-balance {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+#withdrawal-button {
+  float: right;
+}
+
+/*--------------------------------------------*/
+
   
-  /*-----------------------Right Side----------------------------------*/
+  /*----------------------- Right Side----------------------------------*/
   
   #info-container {
     margin-top: 10px;
@@ -37,15 +58,22 @@
     float: right;
   }
   
-  #get-price {
+  #get-prize {
     width: 50%;
     margin-left: 25%;
     text-align: center;
   }
   
   
+  #last-game {
+    margin-top: 75px;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+  }
+
   #next-game {
-    margin-top: 100px;
+    margin-top: 25px;
     width: 50%;
     margin-left: 25%;
     text-align: center;
