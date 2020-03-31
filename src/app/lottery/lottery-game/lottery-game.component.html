@@ -1,7 +1,7 @@
 <div id="bet-container">
     <mat-grid-list cols="8" rowHeight="50px">
-        <mat-grid-tile 
-            *ngFor="let number of numbers" 
+        <mat-grid-tile
+            *ngFor="let number of numbers"
             (click)="onSelect($event, number)">
             {{ number }}
         </mat-grid-tile>
@@ -36,7 +36,7 @@
     -->
 
     <mat-card id="next-game">
-        <h3>Next Game:</h3> {{ countdown }} 
+        <h3>Next Game:</h3> {{ countdown }}
     </mat-card>
 
 
@@ -58,7 +58,7 @@
 
 <!-- This view only gets displayed if user is owner of an account-->
 <div id="owner-container" *ngIf="ownership">
-
+    <!--<mat-toolbar color="primary" class="center">Owner Dashboard</mat-toolbar>-->
     <mat-card id="owner-balance">
         <h3>Balance:</h3> {{ owner_balance }} ETH
     </mat-card>

@@ -5,12 +5,10 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "amount",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "conversionRate",
           "type": "uint256"
         }
@@ -18,7 +16,6 @@
       "name": "convert",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "convertedAmount",
           "type": "uint256"
         }
@@ -28,15 +25,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/ConvertLib.sol\":{\"keccak256\":\"0x9f8249ffc0dee02477303cf8203490724bb1b4fa95529f57f045b050224f9f3f\",\"urls\":[\"bzz-raw://b722aa57de643288538efde477ecf5b5faae0eb9d736e588a8900dfce346347a\",\"dweb:/ipfs/QmVy4eGhyRNMebHKNVyKxZv9Ev3FmvxvaEa1c9jgDk6g5S\"]}},\"version\":1}",
-  "bytecode": "0x60c3610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a723158205a66495fd866618aeeefa8a753f70b052596257c9512446ded408e8df8990a2964736f6c63430005100032",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea265627a7a723158205a66495fd866618aeeefa8a753f70b052596257c9512446ded408e8df8990a2964736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\"},{\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/ConvertLib.sol\":{\"keccak256\":\"0x9f8249ffc0dee02477303cf8203490724bb1b4fa95529f57f045b050224f9f3f\",\"urls\":[\"bzzr://ec0c118542cc54ddb3becb123dd560e936da71468f994b39361c5a83c2e48aef\"]}},\"version\":1}",
+  "bytecode": "0x60ba610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea165627a7a723058206df871bbf3bb5011ada7f42e156352a6947ba9250b69208b156a8752a55f12270029",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b606b60048036036040811015604c57600080fd5b8101908080359060200190929190803590602001909291905050506081565b6040518082815260200191505060405180910390f35b600081830290509291505056fea165627a7a723058206df871bbf3bb5011ada7f42e156352a6947ba9250b69208b156a8752a55f12270029",
   "sourceMap": "25:156:0:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "25:156:0:-;;;;;;;;;;;;;;;;;;;;;;;;47:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;47:132:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;118:20;161:14;152:6;:23;145:30;;47:132;;;;:::o",
   "source": "pragma solidity ^0.5.0;\n\nlibrary ConvertLib {\n\tfunction convert(uint amount,uint conversionRate) public pure returns (uint convertedAmount)\n\t{\n\t\treturn amount * conversionRate;\n\t}\n}\n",
-  "sourcePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/ConvertLib.sol",
+  "sourcePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/ConvertLib.sol",
   "ast": {
-    "absolutePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/ConvertLib.sol",
+    "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/ConvertLib.sol",
     "exportedSymbols": {
       "ConvertLib": [
         16
@@ -241,7 +238,7 @@
     "src": "0:182:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/oldi/Projects/Lottery-DApp/lottery-dapp/contracts/ConvertLib.sol",
+    "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/ConvertLib.sol",
     "exportedSymbols": {
       "ConvertLib": [
         16
@@ -447,14 +444,14 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x92d3c16C0EE0d77EC9eF094A7AD6BA058E4CCBf2",
-      "transactionHash": "0x8d03ad614c79c1a58084e50e5ddc3d3164e7710b03e29b6bb0182745e16764b6"
+      "address": "0x6b53F2B80E2B8A8c80b8bBce7829C2812ADBA04B",
+      "transactionHash": "0xa60d6b7737bbb4622c318489d3f0d301afa0c1430a86cc5d103d56648aa2af79"
     },
     "5778": {
       "events": {},
@@ -463,9 +460,8 @@
       "transactionHash": "0xaf4e5d66b94ff04af1f70a5e634dbe035dd34f67f44806515b5d10afcf6fcb67"
     }
   },
-  "schemaVersion": "3.0.23",
-  "updatedAt": "2020-03-30T16:25:52.403Z",
-  "networkType": "ethereum",
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2020-03-31T09:11:53.882Z",
   "devdoc": {
     "methods": {}
   },

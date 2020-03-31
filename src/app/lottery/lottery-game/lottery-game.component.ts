@@ -25,7 +25,8 @@ export class LotteryGameComponent implements OnInit {
   countdown: string = "00 d 00 h 00 m 00 s";
   prevWinners: string[];
 
-  ownership: boolean = false; 
+  owner:string = "";
+  ownership: boolean = false;
   owner_balance: number = 0;
 
 
@@ -34,6 +35,7 @@ export class LotteryGameComponent implements OnInit {
     console.log('Constructor: ' + web3Service);
   }
 
+  //TODO put a label over the owner's part showing: "Owner Dashboard"
   ngOnInit() {
 
     console.log("Initiating..");
@@ -44,11 +46,12 @@ export class LotteryGameComponent implements OnInit {
         this.Lottery = LotteryAbstraction;
         this.Lottery.deployed().then(deployed => {
           console.log("Lottery init",deployed);
+          this.getOwner();
           this.getComulatedPrize();
           this.getLastGameTime();
           this.getNextGameTime();
           this.getPrevWinners();
-          this.checkOwnership();
+          //this.checkOwnership();
           deployed.gamePosted({}, (err, ev) => {
             console.log('game posted event came in, refreshing balance');
             //this.refreshBalance();
@@ -56,7 +59,8 @@ export class LotteryGameComponent implements OnInit {
             this.getLastGameTime();
             this.getNextGameTime();
             this.getPrevWinners();
-            this.checkOwnership();
+            this.getBalance();
+            //this.checkOwnership();
           });
         });
 
@@ -65,7 +69,7 @@ export class LotteryGameComponent implements OnInit {
   }
 
 
-  
+
   watchAccount() {
     this.web3Service.accountsObservable.subscribe((accounts) => {
       this.accounts = accounts;
@@ -73,18 +77,21 @@ export class LotteryGameComponent implements OnInit {
       //this.refreshBalance();
       this.account_selected = accounts[0];
       console.log("Account:",this.account_selected);
+      this.getOwner();
+
 
     });
   }
 
+  //TODO put it in order and implement the second click to remove only the number clicked
   onSelect($event, number) {
-    
+
     // only append number to selection if less than 8 numbers have been selected already && the number hasn't been selected before
     if(this.selected_numbers.length < 8 && !this.selected_numbers.includes(number)){
-      
+
       // update the background color for selected numbers
       $event.target.style.background = 'gray';
-      
+
       this.selected_numbers.push(number);
     }
   }
@@ -94,6 +101,7 @@ export class LotteryGameComponent implements OnInit {
   }
 
   makeBet() {
+
 
     if(this.selected_numbers.length == 8){
       console.log("makeBet()");
@@ -134,7 +142,7 @@ export class LotteryGameComponent implements OnInit {
     this.setStatus('Initiating transaction... (please wait)');
     try {
       const deployedLottery = await this.Lottery.deployed();
-      //TODO parse string and give the array
+
       const transaction = await deployedLottery.postGame.sendTransaction(this.selected_numbers, {from: this.account_selected,value:1000000000000000000});
 
       if (!transaction) {
@@ -168,7 +176,7 @@ export class LotteryGameComponent implements OnInit {
       console.log(e);
       this.setStatus('Error getting prize balance; see log.');
     }
-    
+
     this.prize = Math.abs(prizeBalance/1000000000000000000);
 
 
@@ -185,7 +193,7 @@ export class LotteryGameComponent implements OnInit {
       //retrieves the time in seconds and gets converted to milliseconds (* 1000) to work for the view
       this.lastGameTime = await deployedLottery.getLastGameTime.call() * 1000;
       console.log('Last game time: ' + this.lastGameTime);
-      
+
 
     } catch (e) {
       console.log(e);
@@ -195,17 +203,23 @@ export class LotteryGameComponent implements OnInit {
   }
 
   async getNextGameTime(){
+
     // gets called on ngOnInit and sets the next game time
     // timestamp in milliseconds
     try {
 
+      //this.getLastGameTime();
       //const deployedLottery = await this.Lottery.deployed();
       //const nextGameTime = await deployedLottery.getNextGameTime.call();
       //console.log('Next game time: ' + nextGameTime);
 
+      const deployedLottery = await this.Lottery.deployed();
 
-      //TODO get 'real' next game time
-      this.nextGameTime = 1585764812000;  // equal to 4/1/2020, 8:13:32 PM
+      //retrieves the time in seconds and gets converted to milliseconds (* 1000) to work for the view
+      this.nextGameTime = await deployedLottery.getNextGameTimestamp.call()*1000;
+      console.log('Next game time: ' + this.nextGameTime);
+
+      //this.nextGameTime = getNextGameTimestamp//1585764812000;  // equal to 4/1/2020, 8:13:32 PM
 
 
       let delta: number;
@@ -221,7 +235,7 @@ export class LotteryGameComponent implements OnInit {
         delta = this.nextGameTime - Date.now();
 
 
-        //calculate delta of days 
+        //calculate delta of days
         delta_days = Math.floor(delta / 1000 / 60 / 60 / 24);
 
         //calculate the hours of the remaining difference between delta and delta_days
@@ -233,19 +247,28 @@ export class LotteryGameComponent implements OnInit {
         //calculate the sec of the remaining difference between delta and delta_min
         delta_sec = Math.floor(delta / 1000) - (delta_days*24*60*60 + delta_hours*60*60 + delta_min*60);
 
+        //console.log(Date.now());
 
         // set final countdown string
-        this.countdown =  delta_days + " d "; 
-        this.countdown += delta_hours + " h "; 
+        if(this.nextGameTime<Date.now()){
+
+        //if(delta_days<=0 && delta_hours ==0 && delta_min==0 && delta_sec==0){
+          this.countdown = "Next bet will launch the game!"
+
+        }else{
+
+        this.countdown =  delta_days + " d ";
+        this.countdown += delta_hours + " h ";
         this.countdown += delta_min + " m ";
         this.countdown += delta_sec + " s ";
+      }
 
       }, 1000);
-      
+
 
     } catch (e) {
       console.log(e);
-      this.setStatus('Error getting last time; see log.');
+      this.setStatus('Error getting next time; see log.');
     }
 
   }
@@ -262,7 +285,7 @@ export class LotteryGameComponent implements OnInit {
       //console.log('Account', this.model.account);
 
       const previousWinnersGames = await deployedLottery.showWinnersGame.call();
-      //TODO parse it
+
       //const previousWinnersGames = "000012345"
       console.log('Last winners games array: ' + previousWinnersGames);
 
@@ -294,22 +317,99 @@ export class LotteryGameComponent implements OnInit {
 
   }
 
-  async checkOwnership() {
-    // TODO check if user is owner of an account
-    // global ownership var is set to true in order to display ownership relevant information
-    
-    //this.ownership = true;
+  async getOwner(){
+
+    try {
+
+
+      const deployedLottery = await this.Lottery.deployed();
+
+      const owner = await deployedLottery.getOwner.call();
+
+      this.owner = owner;
+      console.log("owner:",this.owner);
+
+      //alert(this.owner);
+
+
+    } catch (e) {
+      console.log(e);
+      this.setStatus('Error getting owner; see log.');
+    }
+
+    if(this.account_selected==this.owner){
+      this.ownership = true;
+    }else{
+      this.ownership = false;
+    }
+
+
 
     // only if ownership was set to true, call the getBalance function
     if (this.ownership) { this.getBalance(); }
+
+
+
   }
 
+  /*async checkOwnership() {
+
+    // global ownership var is set to true in order to display ownership relevant information
+    //alert(this.account_selected+":"+this.owner);
+    if(this.account_selected==this.owner){
+      this.ownership = true;
+    }
+
+
+
+    // only if ownership was set to true, call the getBalance function
+    if (this.ownership) { this.getBalance(); }
+  }*/
+
   async getBalance() {
-    console.log("getBalance()");   
+
+    try {
+
+
+      const deployedLottery = await this.Lottery.deployed();
+
+      const owner_balance = await deployedLottery.getOwnerReward.call();
+
+      this.owner_balance = owner_balance/1000000000000000000;
+
+
+      //alert(this.owner);
+
+
+    } catch (e) {
+      console.log(e);
+      this.setStatus('Error getting owner balance; see log.');
+    }
+
+
   }
 
   async withdrawal() {
-    console.log("withdrawal()");   
+
+    try {
+
+      console.log("withdrawing");
+
+      const deployedLottery = await this.Lottery.deployed();
+
+      await deployedLottery.withdrawAsOwner({from:this.account_selected});
+
+      this.owner_balance = 0;
+
+      this.getBalance();
+
+
+    } catch (e) {
+      console.log(e);
+      this.setStatus('Error getting owner withdraw; see log.');
+    }
+
+
   }
 
 }

@@ -463,6 +463,11 @@ contract Lottery is Ownable{
         return lastGameTime;
 
     }
+    function getNextGameTimestamp() public view returns(uint){
+
+        return lastGameTime+timerDelay;
+
+    }
 
     function getComulatedPrize() public view returns (uint){
         //return address(this).balance;
@@ -482,6 +487,11 @@ contract Lottery is Ownable{
         msg.sender.transfer(toTransfer);
 
 
+    }
+
+    function getOwner() public view returns (address){
+
+      return owner;
     }
 
     function showWinnersGame() public view returns(uint[] memory){
