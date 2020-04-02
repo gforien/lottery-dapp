@@ -20,6 +20,7 @@ import { LotteryGameComponent } from './lottery-game/lottery-game.component';
   imports: [
     CommonModule,
     MatGridListModule,
+    MatToolbarModule,
     MatCardModule,
     MatButtonModule,
     MatListModule

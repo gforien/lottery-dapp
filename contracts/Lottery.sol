@@ -499,6 +499,10 @@ contract Lottery is Ownable{
         return winnersGameList;
 
     }
+    function showPlayersGames(address _address) public view returns(uint[] memory){
+      return addressToGame[_address];
+
+    }
 
 
 }

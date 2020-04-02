@@ -18,6 +18,7 @@ export class LotteryGameComponent implements OnInit {
   numbers = Array.from(Array(32)).map((e,i) => ++i)  //create 32 numbers (1,...,32) that the user can choose from
   selected_numbers: number[] = [];
   account_selected = null;
+  current_bets: string[] = [];
 
   prize: number = 0;
   lastGameTime: number = 0;
@@ -51,6 +52,7 @@ export class LotteryGameComponent implements OnInit {
           this.getLastGameTime();
           this.getNextGameTime();
           this.getPrevWinners();
+          this.getCurrentBets();
           //this.checkOwnership();
           deployed.gamePosted({}, (err, ev) => {
             console.log('game posted event came in, refreshing balance');
@@ -60,6 +62,7 @@ export class LotteryGameComponent implements OnInit {
             this.getNextGameTime();
             this.getPrevWinners();
             this.getBalance();
+            this.getCurrentBets();
             //this.checkOwnership();
           });
         });
@@ -78,6 +81,7 @@ export class LotteryGameComponent implements OnInit {
       this.account_selected = accounts[0];
       console.log("Account:",this.account_selected);
       this.getOwner();
+      this.getCurrentBets();
 
 
     });
@@ -270,6 +274,53 @@ export class LotteryGameComponent implements OnInit {
       console.log(e);
       this.setStatus('Error getting next time; see log.');
     }
+
+  }
+  async getCurrentBets(){
+    //this function gets called on ngOnInit and sets the previous winners
+    this.current_bets = []
+
+    try {
+
+
+      const deployedLottery = await this.Lottery.deployed();
+      //console.log(deployedLottery);
+      //console.log('Account', this.model.account);
+
+      const current_bets = await deployedLottery.showPlayersGames.call(this.account_selected);
+
+      //const previousWinnersGames = "000012345"
+      console.log('Current bets of player: ' + current_bets);
+
+
+
+      for(var i=0;i<current_bets.length/8;i++){
+
+          let array = []
+
+          for(var j=0;j<8;j++){
+
+            array.push(current_bets[i*8+j]);
+          }
+          this.current_bets.push(array.toString());
+          //this.prevWinners.push(array.toString());
+
+
+      }
+      if ( this.current_bets.length==0){
+        this.current_bets.push("You don't have any bets yet!");
+      }
+
+
+      //this.prevWinners.push(previousWinnersGames.toString());
+
+
+
+    } catch (e) {
+      console.log(e);
+      this.setStatus('Error getting current bet; see log.');
+    }
+
 
   }
 

@@ -30,18 +30,18 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":\"Ownable\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":{\"keccak256\":\"0xae386d71ecd05399a2b870311361191e13c25b68c60f36e1dda355a11425f761\",\"urls\":[\"bzzr://1e2d8b1c08be7ec5d56d84398738d4982c15c69ba6c6ff44f030e18067aa4c24\"]}},\"version\":1}",
-  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555034801561005057600080fd5b5061021f806100606000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063f2fde38b14610085575b600080fd5b6100436100c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c76004803603602081101561009b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100ee565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f6f6e6c79206f776e65722063616e20657865637574652074686973000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a723058204deba765092f447b7c507c4cf06b63bfee23ebbe465dd35c1f03c1c19c0ef9920029",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063f2fde38b14610085575b600080fd5b6100436100c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c76004803603602081101561009b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100ee565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f6f6e6c79206f776e65722063616e20657865637574652074686973000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a723058204deba765092f447b7c507c4cf06b63bfee23ebbe465dd35c1f03c1c19c0ef9920029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":\"Ownable\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol\":{\"keccak256\":\"0x03e8cb5ecb81ea318d259fca5cf28a6a5ba2bf5ad02381a50789e0abb05200bf\",\"urls\":[\"bzzr://472da8a7d55ccda91c35ca75ecb721030dd120de2600b8e5795fa5f9b3c6f8de\"]}},\"version\":1}",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555034801561005057600080fd5b5061021f806100606000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063f2fde38b14610085575b600080fd5b6100436100c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c76004803603602081101561009b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100ee565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f6f6e6c79206f776e65722063616e20657865637574652074686973000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820a37c775828b1fb279e2e114af9458e11f1c1cb9a1f6576b3c318f5b18a585d4e0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80638da5cb5b1461003b578063f2fde38b14610085575b600080fd5b6100436100c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100c76004803603602081101561009b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100ee565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f6f6e6c79206f776e65722063616e20657865637574652074686973000000000081525060200191505060405180910390fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820a37c775828b1fb279e2e114af9458e11f1c1cb9a1f6576b3c318f5b18a585d4e0029",
   "sourceMap": "1814:339:1:-;;;1861:10;1838:33;;;;;;;;;;;;;;;;;;;;1814:339;8:9:-1;5:2;;;30:1;27;20:12;5:2;1814:339:1;;;;;;;",
   "deployedSourceMap": "1814:339:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1814:339:1;;;;;;;;;;;;;;;;;;;;;;;;1838:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;2054:97;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2054:97:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;1838:33;;;;;;;;;;;;;:::o;2054:97::-;1993:5;;;;;;;;;;;1979:19;;:10;:19;;;1971:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2135:9;2127:5;;:17;;;;;;;;;;;;;;;;;;2054:97;:::o",
-  "source": "pragma solidity ^0.5.1;\n\nlibrary SafeMath {\n\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\n        uint256 c = a + b;\n        require(c >= a, \"SafeMath: addition overflow\");\n\n        return c;\n    }\n\n\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\n        return sub(a, b, \"SafeMath: subtraction overflow\");\n    }\n\n\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b <= a, errorMessage);\n        uint256 c = a - b;\n\n        return c;\n    }\n\n\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        uint256 c = a * b;\n        require(c / a == b, \"SafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\n        return div(a, b, \"SafeMath: division by zero\");\n    }\n\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        // Solidity only automatically asserts when dividing by 0\n        require(b > 0, errorMessage);\n        uint256 c = a / b;\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\n\n        return c;\n    }\n\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\n        return mod(a, b, \"SafeMath: modulo by zero\");\n    }\n\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b != 0, errorMessage);\n        return a % b;\n    }\n}\n\ncontract Ownable {\n\n    address public owner = msg.sender;\n    // adress zero = 0x0000000000000000000000000000000000000000;\n    modifier onlyOwner {\n        require(msg.sender == owner, \"only owner can execute this\");\n        _;\n    }\n\n    function transferOwnership(address _newOwner) public onlyOwner {\n        owner = _newOwner;\n    }\n}\n\n\ncontract Lottery is Ownable{\n\n    using SafeMath for uint;\n\n    uint price = 1000000000000000000; //TODO change it  // 1 ether =  10000000000000000000 wei\n    uint fee = 20000000000000000 ; // 2% fee\n\n    uint[qntNumbers] winnerGame ;\n\n    //winnerGame = [1,2,3,4,5,6,7,8];\n\n    //[7,15,18,19,29,30,46,50]  for 60 nummbers\n     //[6,7,9,10,11,15,18,19] for 20\n     //[2,10,18,19,20,22,27,29] for 32\n\n    uint constant qntNumbers  = 8;\n    uint constant numberMax = 32; //TODO make the caculations and change it\n\n    uint timerDelay = 45; //60*60*23; //23h\n    uint lastGameTime= now;\n\n    //a game is 8 numbers of the array: if array.lenght == 16, nbGames == 2\n    mapping(address=>uint[]) addressToGame;\n    address payable[] players;\n    address payable[]  winners;\n\n    uint Prize;\n    uint ownerReward;\n\n    uint[] winnersGameList;\n\n\n\n    function isNewPlayer(address _address) private view returns(bool){\n        //address NewPlayer = msg.sender;\n\n        for (uint i=0;i<players.length;i++){\n            if ( players[i]==_address){\n\n                return false;\n            }\n        }\n        return true;\n\n\n    }\n\n    event printInt(uint integer);\n    event printBool(bool boolean);\n\n    event gamePosted(uint[qntNumbers] _numbers);\n\n\n    //TODO make a test for multiple games\n    function postGame(uint[qntNumbers] memory _numbers) public payable costs(price) returns (uint[] memory){\n\n        Prize +=price-fee;\n        ownerReward = address(this).balance - Prize;\n\n        assert(address(this).balance >= Prize);\n\n        address payable NewPlayer = msg.sender;\n        bool _isNewPlayer = isNewPlayer(NewPlayer);\n\n\n\n        emit printBool(_isNewPlayer);\n\n        if (_isNewPlayer){\n\n            players.push(NewPlayer);\n            addressToGame[NewPlayer] = _numbers;\n\n        }else{\n\n            uint[] storage olderGames = addressToGame[NewPlayer];\n\n                //uint totalNumbers = olderGames.length;\n\n                //emit printInt(totalNumbers);\n\n                for (uint i=0;i<qntNumbers;i++){\n\n                    olderGames.push(_numbers[i]);\n\n                    }\n\n\n             }\n\n        emit gamePosted(_numbers);\n\n        //return _isNewPlayer;\n\n        if ( getTimeNextGame()==0){\n\n            lastGameTime = now;\n\n            playRound();\n\n        }\n\n\n        return addressToGame[NewPlayer];\n\n    }\n\n\n\n    //TODO the entiry function\n    function getEntropy() private returns(uint){\n\n        return 1;\n\n    }\n\n\n\n    function getWinnerGame() public returns(uint[qntNumbers] memory){\n\n\n\n\n        bytes4[8] memory x = [bytes4(0) , 0 ,0,0,0,0,0,0 ];\n\n        uint entropy = getEntropy();\n        /*uint blockNumber = block.number;\n        bytes32 blockHash1 = blockhash(blockNumber-1);\n        bytes32 blockHash6 = blockhash(blockNumber-6);\n        bytes32 blockHash13 = blockhash(blockNumber-13);*/\n\n        bytes32 hash = keccak256(abi.encodePacked(entropy));//,ListWinners,games,blockHash1,blockHash6,blockHash13));\n        //return hash;\n\n        assembly {\n            mstore(x, hash)\n            mstore(add(x, 28), hash)\n            mstore(add(x, 56), hash)\n            mstore(add(x, 84), hash)\n            mstore(add(x, 112), hash)\n            mstore(add(x, 140), hash)\n            mstore(add(x, 168), hash)\n            mstore(add(x, 196), hash)\n        }\n\n        uint n0 = uint32 (x[0]);\n        n0 = n0%numberMax;\n        uint n1 = uint32 (x[1]);\n        n1 = n1%numberMax;\n        uint n2 = uint32 (x[2]);\n        n2 = n2%numberMax;\n        uint n3 = uint32 (x[3]);\n        n3 = n3%numberMax;\n        uint n4 = uint32 (x[4]);\n        n4 = n4%numberMax;\n        uint n5 = uint32 (x[5]);\n        n5 = n5%numberMax;\n        uint n6 = uint32 (x[6]);\n        n6 = n6%numberMax;\n        uint n7 = uint32 (x[7]);\n        n7 = n7%numberMax;\n\n        uint[qntNumbers] memory tabNumbers = [n0,n1,n2,n3,n4,n5,n6,n7];\n\n        quickSort(tabNumbers,0,tabNumbers.length -1);\n\n        removeDoubles(tabNumbers);\n\n        winnerGame = tabNumbers;\n\n        //payer();\n\n        lastGameTime = now;\n\n        return winnerGame;\n\n\n\n    }\n\n    function removeDoubles(uint[qntNumbers] memory tab) private{\n\n        bool a=true;\n        bool b=true;\n        bool c=true;\n        bool d=true;\n\n\n            for (uint i=0;i<tab.length;i++){\n\n                if(tab[0]==0){\n                    tab[0]=numberMax;\n                }\n\n                if (tab[i]> numberMax){\n                    tab[i] = tab[i]%numberMax;\n                    b=false;\n                }\n\n                if ( (i+1 < tab.length)&& (tab[i]==tab[i+1])){\n\n                    tab[i+1]= tab[i+1] + 1;\n                    c=false;\n               }\n            }\n\n            if(a&&b&&c&&d){\n                quickSort(tab,0,tab.length -1);\n                //emit tabCheck(tab);\n                return;\n            }\n\n            quickSort(tab,0,tab.length -1);\n\n            removeDoubles(tab);\n\n    }\n\n    function quickSort(uint[qntNumbers] memory tab, uint left, uint right) private {\n        uint i = left;\n        uint j = right;\n        uint mid = tab[left + (right - left) / 2];\n        while (i <= j) {\n            while (tab[i] < mid) i++;\n            while (mid < tab[j]) j--;\n            if (i <= j) {\n                (tab[i], tab[j]) = (tab[j], tab[i]);\n                i++;\n                j--;\n            }\n        }\n        if (left < j)\n            quickSort(tab, left, j);\n        if (i < right)\n            quickSort(tab, i, right);\n\n    }\n\n    /*function setWinnerGameeMannually(uint[qntNumbers] memory _winnerGame) public onlyOwner{\n\n        winnerGame = _winnerGame;\n    }*/\n\n    function checkIfGameIsWin(uint[qntNumbers] memory _winnerGame ,uint[] memory _gameArray, uint _start,uint _end) private returns(bool){\n\n\n\n\n        require( _end -_start==qntNumbers-1,\"not good quantity of numbers\");\n        require( (_end+1)%8 == 0 , \"not good indexes _start and _end\");\n\n        //require( _gameArray)\n\n\n        for(uint i=_start;i<=_end;i++){\n\n            if (_winnerGame[i-_start]!=_gameArray[i]){\n\n                return false;\n\n            }\n\n\n        }\n        return true;\n\n    }\n\n    function searchWinGameInArray(uint[qntNumbers] memory __winnerGame, uint[] memory __gameArray ) private returns(bool){\n\n        uint nbGamesTotal = __gameArray.length/qntNumbers;\n\n        for (uint n = 0;n<nbGamesTotal;n++){\n\n            uint start = qntNumbers*n;\n            uint end = qntNumbers*n+qntNumbers-1;\n\n            if (checkIfGameIsWin(__winnerGame,__gameArray,start,end)){\n\n                return true;\n\n\n            }\n\n\n        }\n        return false;\n\n    }\n\n\n    //TODO run the test to see if the winners are deleted from players list\n    function findWinners() private {// returns (address payable[] memory){\n\n        winnerGame = getWinnerGame();\n\n        for(uint i=0;i<winnerGame.length;i++){\n\n            winnersGameList.push(winnerGame[i]);\n\n        }\n\n\n\n        for(uint i=0; i<players.length;i++){\n\n            address payable currentPlayer = players[i];\n            uint[] storage gameListCurrentPlayer = addressToGame[currentPlayer];\n\n            if(searchWinGameInArray(winnerGame,gameListCurrentPlayer)){\n\n                //pushes the winner to the wining list\n                winners.push(currentPlayer);\n\n            }\n\n            //delete the player from the list of player, even if he doesnt win\n            delete addressToGame[currentPlayer];\n\n\n        }\n\n        //we could remove the return, but its easier to debug like this\n        //return winners;\n\n    }\n\n\n    function payerWinners() private returns (uint) {\n\n        uint totalWinners = winners.length;\n\n        if (totalWinners == 0){\n\n            return 0;\n\n        }else{\n\n            uint individualPrize = Prize/totalWinners;\n            Prize = 0;\n\n            for(uint i=0;i<totalWinners;i++){\n\n                winners[i].transfer(individualPrize);\n                delete winners[i];\n\n\n            }\n\n            return individualPrize;\n\n\n        }\n\n\n\n    }\n\n    function playRound() private {\n\n        findWinners();\n        payerWinners();\n\n\n    }\n\n   modifier costs(uint amount){\n        require(msg.value >= amount, \"insuficient amount\");\n        _;\n    }\n\n\n    function getTimeNextGame() public view returns (uint){\n\n        uint time = timerDelay + lastGameTime - now ;\n        if (time>timerDelay){\n            time=0;\n        }\n\n        return time;\n    }\n\n    function getLastGameTime() public view returns(uint){\n\n        return lastGameTime;\n\n    }\n    function getNextGameTimestamp() public view returns(uint){\n\n        return lastGameTime+timerDelay;\n\n    }\n\n    function getComulatedPrize() public view returns (uint){\n        //return address(this).balance;\n        return Prize;\n    }\n\n    function getOwnerReward() public view returns (uint){\n        //return address(this).balance;\n        return ownerReward;\n    }\n\n    function withdrawAsOwner() public onlyOwner{\n\n        uint toTransfer = ownerReward;\n        ownerReward = 0;\n\n        msg.sender.transfer(toTransfer);\n\n\n    }\n\n    function getOwner() public view returns (address){\n\n      return owner;\n    }\n\n    function showWinnersGame() public view returns(uint[] memory){\n\n        return winnersGameList;\n\n    }\n\n\n}\n",
+  "source": "pragma solidity ^0.5.1;\n\nlibrary SafeMath {\n\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\n        uint256 c = a + b;\n        require(c >= a, \"SafeMath: addition overflow\");\n\n        return c;\n    }\n\n\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\n        return sub(a, b, \"SafeMath: subtraction overflow\");\n    }\n\n\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b <= a, errorMessage);\n        uint256 c = a - b;\n\n        return c;\n    }\n\n\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        uint256 c = a * b;\n        require(c / a == b, \"SafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\n        return div(a, b, \"SafeMath: division by zero\");\n    }\n\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        // Solidity only automatically asserts when dividing by 0\n        require(b > 0, errorMessage);\n        uint256 c = a / b;\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\n\n        return c;\n    }\n\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\n        return mod(a, b, \"SafeMath: modulo by zero\");\n    }\n\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\n        require(b != 0, errorMessage);\n        return a % b;\n    }\n}\n\ncontract Ownable {\n\n    address public owner = msg.sender;\n    // adress zero = 0x0000000000000000000000000000000000000000;\n    modifier onlyOwner {\n        require(msg.sender == owner, \"only owner can execute this\");\n        _;\n    }\n\n    function transferOwnership(address _newOwner) public onlyOwner {\n        owner = _newOwner;\n    }\n}\n\n\ncontract Lottery is Ownable{\n\n    using SafeMath for uint;\n\n    uint price = 1000000000000000000; //TODO change it  // 1 ether =  10000000000000000000 wei\n    uint fee = 20000000000000000 ; // 2% fee\n\n    uint[qntNumbers] winnerGame ;\n\n    //winnerGame = [1,2,3,4,5,6,7,8];\n\n    //[7,15,18,19,29,30,46,50]  for 60 nummbers\n     //[6,7,9,10,11,15,18,19] for 20\n     //[2,10,18,19,20,22,27,29] for 32\n\n    uint constant qntNumbers  = 8;\n    uint constant numberMax = 32; //TODO make the caculations and change it\n\n    uint timerDelay = 45; //60*60*23; //23h\n    uint lastGameTime= now;\n\n    //a game is 8 numbers of the array: if array.lenght == 16, nbGames == 2\n    mapping(address=>uint[]) addressToGame;\n    address payable[] players;\n    address payable[]  winners;\n\n    uint Prize;\n    uint ownerReward;\n\n    uint[] winnersGameList;\n\n\n\n    function isNewPlayer(address _address) private view returns(bool){\n        //address NewPlayer = msg.sender;\n\n        for (uint i=0;i<players.length;i++){\n            if ( players[i]==_address){\n\n                return false;\n            }\n        }\n        return true;\n\n\n    }\n\n    event printInt(uint integer);\n    event printBool(bool boolean);\n\n    event gamePosted(uint[qntNumbers] _numbers);\n\n\n    //TODO make a test for multiple games\n    function postGame(uint[qntNumbers] memory _numbers) public payable costs(price) returns (uint[] memory){\n\n        Prize +=price-fee;\n        ownerReward = address(this).balance - Prize;\n\n        assert(address(this).balance >= Prize);\n\n        address payable NewPlayer = msg.sender;\n        bool _isNewPlayer = isNewPlayer(NewPlayer);\n\n\n\n        emit printBool(_isNewPlayer);\n\n        if (_isNewPlayer){\n\n            players.push(NewPlayer);\n            addressToGame[NewPlayer] = _numbers;\n\n        }else{\n\n            uint[] storage olderGames = addressToGame[NewPlayer];\n\n                //uint totalNumbers = olderGames.length;\n\n                //emit printInt(totalNumbers);\n\n                for (uint i=0;i<qntNumbers;i++){\n\n                    olderGames.push(_numbers[i]);\n\n                    }\n\n\n             }\n\n        emit gamePosted(_numbers);\n\n        //return _isNewPlayer;\n\n        if ( getTimeNextGame()==0){\n\n            lastGameTime = now;\n\n            playRound();\n\n        }\n\n\n        return addressToGame[NewPlayer];\n\n    }\n\n\n\n    //TODO the entiry function\n    function getEntropy() private returns(uint){\n\n        return 1;\n\n    }\n\n\n\n    function getWinnerGame() public returns(uint[qntNumbers] memory){\n\n\n\n\n        bytes4[8] memory x = [bytes4(0) , 0 ,0,0,0,0,0,0 ];\n\n        uint entropy = getEntropy();\n        /*uint blockNumber = block.number;\n        bytes32 blockHash1 = blockhash(blockNumber-1);\n        bytes32 blockHash6 = blockhash(blockNumber-6);\n        bytes32 blockHash13 = blockhash(blockNumber-13);*/\n\n        bytes32 hash = keccak256(abi.encodePacked(entropy));//,ListWinners,games,blockHash1,blockHash6,blockHash13));\n        //return hash;\n\n        assembly {\n            mstore(x, hash)\n            mstore(add(x, 28), hash)\n            mstore(add(x, 56), hash)\n            mstore(add(x, 84), hash)\n            mstore(add(x, 112), hash)\n            mstore(add(x, 140), hash)\n            mstore(add(x, 168), hash)\n            mstore(add(x, 196), hash)\n        }\n\n        uint n0 = uint32 (x[0]);\n        n0 = n0%numberMax;\n        uint n1 = uint32 (x[1]);\n        n1 = n1%numberMax;\n        uint n2 = uint32 (x[2]);\n        n2 = n2%numberMax;\n        uint n3 = uint32 (x[3]);\n        n3 = n3%numberMax;\n        uint n4 = uint32 (x[4]);\n        n4 = n4%numberMax;\n        uint n5 = uint32 (x[5]);\n        n5 = n5%numberMax;\n        uint n6 = uint32 (x[6]);\n        n6 = n6%numberMax;\n        uint n7 = uint32 (x[7]);\n        n7 = n7%numberMax;\n\n        uint[qntNumbers] memory tabNumbers = [n0,n1,n2,n3,n4,n5,n6,n7];\n\n        quickSort(tabNumbers,0,tabNumbers.length -1);\n\n        removeDoubles(tabNumbers);\n\n        winnerGame = tabNumbers;\n\n        //payer();\n\n        lastGameTime = now;\n\n        return winnerGame;\n\n\n\n    }\n\n    function removeDoubles(uint[qntNumbers] memory tab) private{\n\n        bool a=true;\n        bool b=true;\n        bool c=true;\n        bool d=true;\n\n\n            for (uint i=0;i<tab.length;i++){\n\n                if(tab[0]==0){\n                    tab[0]=numberMax;\n                }\n\n                if (tab[i]> numberMax){\n                    tab[i] = tab[i]%numberMax;\n                    b=false;\n                }\n\n                if ( (i+1 < tab.length)&& (tab[i]==tab[i+1])){\n\n                    tab[i+1]= tab[i+1] + 1;\n                    c=false;\n               }\n            }\n\n            if(a&&b&&c&&d){\n                quickSort(tab,0,tab.length -1);\n                //emit tabCheck(tab);\n                return;\n            }\n\n            quickSort(tab,0,tab.length -1);\n\n            removeDoubles(tab);\n\n    }\n\n    function quickSort(uint[qntNumbers] memory tab, uint left, uint right) private {\n        uint i = left;\n        uint j = right;\n        uint mid = tab[left + (right - left) / 2];\n        while (i <= j) {\n            while (tab[i] < mid) i++;\n            while (mid < tab[j]) j--;\n            if (i <= j) {\n                (tab[i], tab[j]) = (tab[j], tab[i]);\n                i++;\n                j--;\n            }\n        }\n        if (left < j)\n            quickSort(tab, left, j);\n        if (i < right)\n            quickSort(tab, i, right);\n\n    }\n\n    /*function setWinnerGameeMannually(uint[qntNumbers] memory _winnerGame) public onlyOwner{\n\n        winnerGame = _winnerGame;\n    }*/\n\n    function checkIfGameIsWin(uint[qntNumbers] memory _winnerGame ,uint[] memory _gameArray, uint _start,uint _end) private returns(bool){\n\n\n\n\n        require( _end -_start==qntNumbers-1,\"not good quantity of numbers\");\n        require( (_end+1)%8 == 0 , \"not good indexes _start and _end\");\n\n        //require( _gameArray)\n\n\n        for(uint i=_start;i<=_end;i++){\n\n            if (_winnerGame[i-_start]!=_gameArray[i]){\n\n                return false;\n\n            }\n\n\n        }\n        return true;\n\n    }\n\n    function searchWinGameInArray(uint[qntNumbers] memory __winnerGame, uint[] memory __gameArray ) private returns(bool){\n\n        uint nbGamesTotal = __gameArray.length/qntNumbers;\n\n        for (uint n = 0;n<nbGamesTotal;n++){\n\n            uint start = qntNumbers*n;\n            uint end = qntNumbers*n+qntNumbers-1;\n\n            if (checkIfGameIsWin(__winnerGame,__gameArray,start,end)){\n\n                return true;\n\n\n            }\n\n\n        }\n        return false;\n\n    }\n\n\n    //TODO run the test to see if the winners are deleted from players list\n    function findWinners() private {// returns (address payable[] memory){\n\n        winnerGame = getWinnerGame();\n\n        for(uint i=0;i<winnerGame.length;i++){\n\n            winnersGameList.push(winnerGame[i]);\n\n        }\n\n\n\n        for(uint i=0; i<players.length;i++){\n\n            address payable currentPlayer = players[i];\n            uint[] storage gameListCurrentPlayer = addressToGame[currentPlayer];\n\n            if(searchWinGameInArray(winnerGame,gameListCurrentPlayer)){\n\n                //pushes the winner to the wining list\n                winners.push(currentPlayer);\n\n            }\n\n            //delete the player from the list of player, even if he doesnt win\n            delete addressToGame[currentPlayer];\n\n\n        }\n\n        //we could remove the return, but its easier to debug like this\n        //return winners;\n\n    }\n\n\n    function payerWinners() private returns (uint) {\n\n        uint totalWinners = winners.length;\n\n        if (totalWinners == 0){\n\n            return 0;\n\n        }else{\n\n            uint individualPrize = Prize/totalWinners;\n            Prize = 0;\n\n            for(uint i=0;i<totalWinners;i++){\n\n                winners[i].transfer(individualPrize);\n                delete winners[i];\n\n\n            }\n\n            return individualPrize;\n\n\n        }\n\n\n\n    }\n\n    function playRound() private {\n\n        findWinners();\n        payerWinners();\n\n\n    }\n\n   modifier costs(uint amount){\n        require(msg.value >= amount, \"insuficient amount\");\n        _;\n    }\n\n\n    function getTimeNextGame() public view returns (uint){\n\n        uint time = timerDelay + lastGameTime - now ;\n        if (time>timerDelay){\n            time=0;\n        }\n\n        return time;\n    }\n\n    function getLastGameTime() public view returns(uint){\n\n        return lastGameTime;\n\n    }\n    function getNextGameTimestamp() public view returns(uint){\n\n        return lastGameTime+timerDelay;\n\n    }\n\n    function getComulatedPrize() public view returns (uint){\n        //return address(this).balance;\n        return Prize;\n    }\n\n    function getOwnerReward() public view returns (uint){\n        //return address(this).balance;\n        return ownerReward;\n    }\n\n    function withdrawAsOwner() public onlyOwner{\n\n        uint toTransfer = ownerReward;\n        ownerReward = 0;\n\n        msg.sender.transfer(toTransfer);\n\n\n    }\n\n    function getOwner() public view returns (address){\n\n      return owner;\n    }\n\n    function showWinnersGame() public view returns(uint[] memory){\n\n        return winnersGameList;\n\n    }\n    function showPlayersGames(address _address) public view returns(uint[] memory){\n      return addressToGame[_address];\n\n    }\n\n\n}\n",
   "sourcePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
   "ast": {
     "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
     "exportedSymbols": {
       "Lottery": [
-        1262
+        1275
       ],
       "Ownable": [
         232
@@ -50,7 +50,7 @@
         203
       ]
     },
-    "id": 1263,
+    "id": 1276,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -247,10 +247,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "153:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -695,10 +695,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "478:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1245,10 +1245,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "944:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1698,10 +1698,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1340:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2258,10 +2258,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1752:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2471,7 +2471,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 1263,
+        "scope": 1276,
         "src": "25:1787:1"
       },
       {
@@ -2519,7 +2519,7 @@
                 "name": "msg",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 1430,
+                "referencedDeclaration": 1443,
                 "src": "1861:3:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_magic_message",
@@ -2571,7 +2571,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1430,
+                            "referencedDeclaration": 1443,
                             "src": "1979:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2647,10 +2647,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1971:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2823,7 +2823,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 1263,
+        "scope": 1276,
         "src": "1814:339:1"
       },
       {
@@ -2853,9 +2853,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1262,
+        "id": 1275,
         "linearizedBaseContracts": [
-          1262,
+          1275,
           232
         ],
         "name": "Lottery",
@@ -2893,7 +2893,7 @@
             "id": 240,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2220:32:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2936,7 +2936,7 @@
             "id": 243,
             "name": "fee",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2315:28:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2979,7 +2979,7 @@
             "id": 247,
             "name": "winnerGame",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2361:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3027,7 +3027,7 @@
             "id": 250,
             "name": "qntNumbers",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2560:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3070,7 +3070,7 @@
             "id": 253,
             "name": "numberMax",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2595:28:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3113,7 +3113,7 @@
             "id": 256,
             "name": "timerDelay",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2672:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3156,7 +3156,7 @@
             "id": 259,
             "name": "lastGameTime",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2716:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3180,7 +3180,7 @@
               "name": "now",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 1432,
+              "referencedDeclaration": 1445,
               "src": "2735:3:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
@@ -3194,7 +3194,7 @@
             "id": 264,
             "name": "addressToGame",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2821:38:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3249,7 +3249,7 @@
             "id": 267,
             "name": "players",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2865:25:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3286,7 +3286,7 @@
             "id": 270,
             "name": "winners",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2896:26:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3323,7 +3323,7 @@
             "id": 272,
             "name": "Prize",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2929:10:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3349,7 +3349,7 @@
             "id": 274,
             "name": "ownerReward",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2945:16:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3375,7 +3375,7 @@
             "id": 277,
             "name": "winnersGameList",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2968:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3782,7 +3782,7 @@
               ],
               "src": "3058:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "2999:278:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -4065,10 +4065,10 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1450,
+                              "referencedDeclaration": 1463,
                               "src": "3609:4:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Lottery_$1262",
+                                "typeIdentifier": "t_contract$_Lottery_$1275",
                                 "typeString": "contract Lottery"
                               }
                             }
@@ -4076,7 +4076,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_Lottery_$1262",
+                                "typeIdentifier": "t_contract$_Lottery_$1275",
                                 "typeString": "contract Lottery"
                               }
                             ],
@@ -4178,10 +4178,10 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1450,
+                                "referencedDeclaration": 1463,
                                 "src": "3656:4:1",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_Lottery_$1262",
+                                  "typeIdentifier": "t_contract$_Lottery_$1275",
                                   "typeString": "contract Lottery"
                                 }
                               }
@@ -4189,7 +4189,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_Lottery_$1262",
+                                  "typeIdentifier": "t_contract$_Lottery_$1275",
                                   "typeString": "contract Lottery"
                                 }
                               ],
@@ -4267,7 +4267,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1419,
+                      "referencedDeclaration": 1432,
                       "src": "3641:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -4334,7 +4334,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1430,
+                      "referencedDeclaration": 1443,
                       "src": "3718:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -5160,7 +5160,7 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1432,
+                            "referencedDeclaration": 1445,
                             "src": "4401:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -5402,7 +5402,7 @@
               ],
               "src": "3534:15:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "3446:1046:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -5486,7 +5486,7 @@
               ],
               "src": "4568:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "4531:70:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -5892,7 +5892,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1417,
+                            "referencedDeclaration": 1430,
                             "src": "5023:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -5939,7 +5939,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1424,
+                      "referencedDeclaration": 1437,
                       "src": "5013:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5988,7 +5988,7 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5436:4:1",
+                        "src": "5284:4:1",
                         "valueSize": 1
                       }
                     },
@@ -5997,7 +5997,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5427:1:1",
+                        "src": "5276:1:1",
                         "valueSize": 1
                       }
                     },
@@ -6016,15 +6016,6 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5202:1:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "x": {
-                        "declaration": 460,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "5389:1:1",
                         "valueSize": 1
                       }
                     },
@@ -6051,7 +6042,7 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5284:4:1",
+                        "src": "5360:4:1",
                         "valueSize": 1
                       }
                     },
@@ -6060,7 +6051,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5276:1:1",
+                        "src": "5351:1:1",
                         "valueSize": 1
                       }
                     },
@@ -6092,11 +6083,20 @@
                       }
                     },
                     {
+                      "x": {
+                        "declaration": 460,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5389:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
                       "hash": {
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5360:4:1",
+                        "src": "5436:4:1",
                         "valueSize": 1
                       }
                     },
@@ -6105,7 +6105,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5351:1:1",
+                        "src": "5427:1:1",
                         "valueSize": 1
                       }
                     }
@@ -8145,7 +8145,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1432,
+                      "referencedDeclaration": 1445,
                       "src": "6175:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -8251,7 +8251,7 @@
               ],
               "src": "4648:25:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "4609:1607:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -10188,7 +10188,7 @@
               "parameters": [],
               "src": "6281:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "6222:822:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -11511,7 +11511,7 @@
               "parameters": [],
               "src": "7129:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "7050:551:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -11675,10 +11675,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "7892:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -11882,10 +11882,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "7969:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -12427,7 +12427,7 @@
               ],
               "src": "7872:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "7745:503:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -13206,7 +13206,7 @@
               ],
               "src": "8365:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "8254:473:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -14094,7 +14094,7 @@
               "parameters": [],
               "src": "8841:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "8810:840:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -14766,7 +14766,7 @@
               ],
               "src": "9697:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "9657:455:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -14869,7 +14869,7 @@
               "parameters": [],
               "src": "10147:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10118:86:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -14904,7 +14904,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1430,
+                            "referencedDeclaration": 1443,
                             "src": "10254:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -14980,10 +14980,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "10246:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15158,7 +15158,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1432,
+                      "referencedDeclaration": 1445,
                       "src": "10425:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -15350,7 +15350,7 @@
               ],
               "src": "10368:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10321:197:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -15429,7 +15429,7 @@
               ],
               "src": "10570:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10524:90:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -15540,7 +15540,7 @@
               ],
               "src": "10670:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10619:106:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -15619,7 +15619,7 @@
               ],
               "src": "10780:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10731:124:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -15698,7 +15698,7 @@
               ],
               "src": "10907:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10861:127:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -15843,7 +15843,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1430,
+                          "referencedDeclaration": 1443,
                           "src": "11113:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15937,7 +15937,7 @@
               "parameters": [],
               "src": "11037:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10994:159:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -16017,7 +16017,7 @@
               ],
               "src": "11199:9:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "11159:77:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -16106,24 +16106,168 @@
               ],
               "src": "11288:15:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "11242:102:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1273,
+              "nodeType": "Block",
+              "src": "11427:46:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 1269,
+                      "name": "addressToGame",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 264,
+                      "src": "11442:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
+                        "typeString": "mapping(address => uint256[] storage ref)"
+                      }
+                    },
+                    "id": 1271,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 1270,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1263,
+                      "src": "11456:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "11442:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1268,
+                  "id": 1272,
+                  "nodeType": "Return",
+                  "src": "11435:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1274,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "showPlayersGames",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1263,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1274,
+                  "src": "11375:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11375:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11374:18:1"
+            },
+            "returnParameters": {
+              "id": 1268,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1267,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1274,
+                  "src": "11413:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1265,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "11413:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 1266,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "11413:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11412:15:1"
+            },
+            "scope": 1275,
+            "src": "11349:124:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1263,
-        "src": "2156:9192:1"
+        "scope": 1276,
+        "src": "2156:9321:1"
       }
     ],
-    "src": "0:11349:1"
+    "src": "0:11478:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/thiagoalmeida/Documents/GitHub/lottery-dapp-front/contracts/Lottery.sol",
     "exportedSymbols": {
       "Lottery": [
-        1262
+        1275
       ],
       "Ownable": [
         232
@@ -16132,7 +16276,7 @@
         203
       ]
     },
-    "id": 1263,
+    "id": 1276,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -16329,10 +16473,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "153:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -16777,10 +16921,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "478:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -17327,10 +17471,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "944:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -17780,10 +17924,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1340:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -18340,10 +18484,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1752:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -18553,7 +18697,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 1263,
+        "scope": 1276,
         "src": "25:1787:1"
       },
       {
@@ -18601,7 +18745,7 @@
                 "name": "msg",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 1430,
+                "referencedDeclaration": 1443,
                 "src": "1861:3:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_magic_message",
@@ -18653,7 +18797,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1430,
+                            "referencedDeclaration": 1443,
                             "src": "1979:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -18729,10 +18873,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "1971:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -18905,7 +19049,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 1263,
+        "scope": 1276,
         "src": "1814:339:1"
       },
       {
@@ -18935,9 +19079,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1262,
+        "id": 1275,
         "linearizedBaseContracts": [
-          1262,
+          1275,
           232
         ],
         "name": "Lottery",
@@ -18975,7 +19119,7 @@
             "id": 240,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2220:32:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19018,7 +19162,7 @@
             "id": 243,
             "name": "fee",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2315:28:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19061,7 +19205,7 @@
             "id": 247,
             "name": "winnerGame",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2361:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19109,7 +19253,7 @@
             "id": 250,
             "name": "qntNumbers",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2560:29:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19152,7 +19296,7 @@
             "id": 253,
             "name": "numberMax",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2595:28:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19195,7 +19339,7 @@
             "id": 256,
             "name": "timerDelay",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2672:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19238,7 +19382,7 @@
             "id": 259,
             "name": "lastGameTime",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2716:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19262,7 +19406,7 @@
               "name": "now",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 1432,
+              "referencedDeclaration": 1445,
               "src": "2735:3:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
@@ -19276,7 +19420,7 @@
             "id": 264,
             "name": "addressToGame",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2821:38:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19331,7 +19475,7 @@
             "id": 267,
             "name": "players",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2865:25:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19368,7 +19512,7 @@
             "id": 270,
             "name": "winners",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2896:26:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19405,7 +19549,7 @@
             "id": 272,
             "name": "Prize",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2929:10:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19431,7 +19575,7 @@
             "id": 274,
             "name": "ownerReward",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2945:16:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19457,7 +19601,7 @@
             "id": 277,
             "name": "winnersGameList",
             "nodeType": "VariableDeclaration",
-            "scope": 1262,
+            "scope": 1275,
             "src": "2968:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -19864,7 +20008,7 @@
               ],
               "src": "3058:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "2999:278:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -20147,10 +20291,10 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1450,
+                              "referencedDeclaration": 1463,
                               "src": "3609:4:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Lottery_$1262",
+                                "typeIdentifier": "t_contract$_Lottery_$1275",
                                 "typeString": "contract Lottery"
                               }
                             }
@@ -20158,7 +20302,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_Lottery_$1262",
+                                "typeIdentifier": "t_contract$_Lottery_$1275",
                                 "typeString": "contract Lottery"
                               }
                             ],
@@ -20260,10 +20404,10 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1450,
+                                "referencedDeclaration": 1463,
                                 "src": "3656:4:1",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_Lottery_$1262",
+                                  "typeIdentifier": "t_contract$_Lottery_$1275",
                                   "typeString": "contract Lottery"
                                 }
                               }
@@ -20271,7 +20415,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_Lottery_$1262",
+                                  "typeIdentifier": "t_contract$_Lottery_$1275",
                                   "typeString": "contract Lottery"
                                 }
                               ],
@@ -20349,7 +20493,7 @@
                       "name": "assert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1419,
+                      "referencedDeclaration": 1432,
                       "src": "3641:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
@@ -20416,7 +20560,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1430,
+                      "referencedDeclaration": 1443,
                       "src": "3718:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -21242,7 +21386,7 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1432,
+                            "referencedDeclaration": 1445,
                             "src": "4401:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -21484,7 +21628,7 @@
               ],
               "src": "3534:15:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "3446:1046:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -21568,7 +21712,7 @@
               ],
               "src": "4568:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "4531:70:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -21974,7 +22118,7 @@
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1417,
+                            "referencedDeclaration": 1430,
                             "src": "5023:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
@@ -22021,7 +22165,7 @@
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1424,
+                      "referencedDeclaration": 1437,
                       "src": "5013:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -22070,7 +22214,7 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5436:4:1",
+                        "src": "5284:4:1",
                         "valueSize": 1
                       }
                     },
@@ -22079,7 +22223,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5427:1:1",
+                        "src": "5276:1:1",
                         "valueSize": 1
                       }
                     },
@@ -22098,15 +22242,6 @@
                         "isOffset": false,
                         "isSlot": false,
                         "src": "5202:1:1",
-                        "valueSize": 1
-                      }
-                    },
-                    {
-                      "x": {
-                        "declaration": 460,
-                        "isOffset": false,
-                        "isSlot": false,
-                        "src": "5389:1:1",
                         "valueSize": 1
                       }
                     },
@@ -22133,7 +22268,7 @@
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5284:4:1",
+                        "src": "5360:4:1",
                         "valueSize": 1
                       }
                     },
@@ -22142,7 +22277,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5276:1:1",
+                        "src": "5351:1:1",
                         "valueSize": 1
                       }
                     },
@@ -22174,11 +22309,20 @@
                       }
                     },
                     {
+                      "x": {
+                        "declaration": 460,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "5389:1:1",
+                        "valueSize": 1
+                      }
+                    },
+                    {
                       "hash": {
                         "declaration": 479,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5360:4:1",
+                        "src": "5436:4:1",
                         "valueSize": 1
                       }
                     },
@@ -22187,7 +22331,7 @@
                         "declaration": 460,
                         "isOffset": false,
                         "isSlot": false,
-                        "src": "5351:1:1",
+                        "src": "5427:1:1",
                         "valueSize": 1
                       }
                     }
@@ -24227,7 +24371,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1432,
+                      "referencedDeclaration": 1445,
                       "src": "6175:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24333,7 +24477,7 @@
               ],
               "src": "4648:25:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "4609:1607:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -26270,7 +26414,7 @@
               "parameters": [],
               "src": "6281:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "6222:822:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -27593,7 +27737,7 @@
               "parameters": [],
               "src": "7129:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "7050:551:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -27757,10 +27901,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "7892:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -27964,10 +28108,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "7969:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -28509,7 +28653,7 @@
               ],
               "src": "7872:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "7745:503:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -29288,7 +29432,7 @@
               ],
               "src": "8365:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "8254:473:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -30176,7 +30320,7 @@
               "parameters": [],
               "src": "8841:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "8810:840:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -30848,7 +30992,7 @@
               ],
               "src": "9697:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "9657:455:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -30951,7 +31095,7 @@
               "parameters": [],
               "src": "10147:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10118:86:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -30986,7 +31130,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1430,
+                            "referencedDeclaration": 1443,
                             "src": "10254:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -31062,10 +31206,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1433,
-                        1434
+                        1446,
+                        1447
                       ],
-                      "referencedDeclaration": 1434,
+                      "referencedDeclaration": 1447,
                       "src": "10246:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -31240,7 +31384,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1432,
+                      "referencedDeclaration": 1445,
                       "src": "10425:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -31432,7 +31576,7 @@
               ],
               "src": "10368:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10321:197:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -31511,7 +31655,7 @@
               ],
               "src": "10570:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10524:90:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -31622,7 +31766,7 @@
               ],
               "src": "10670:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10619:106:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -31701,7 +31845,7 @@
               ],
               "src": "10780:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10731:124:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -31780,7 +31924,7 @@
               ],
               "src": "10907:6:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10861:127:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -31925,7 +32069,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1430,
+                          "referencedDeclaration": 1443,
                           "src": "11113:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -32019,7 +32163,7 @@
               "parameters": [],
               "src": "11037:0:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "10994:159:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -32099,7 +32243,7 @@
               ],
               "src": "11199:9:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "11159:77:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -32188,18 +32332,162 @@
               ],
               "src": "11288:15:1"
             },
-            "scope": 1262,
+            "scope": 1275,
             "src": "11242:102:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1273,
+              "nodeType": "Block",
+              "src": "11427:46:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 1269,
+                      "name": "addressToGame",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 264,
+                      "src": "11442:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
+                        "typeString": "mapping(address => uint256[] storage ref)"
+                      }
+                    },
+                    "id": 1271,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 1270,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1263,
+                      "src": "11456:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "11442:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1268,
+                  "id": 1272,
+                  "nodeType": "Return",
+                  "src": "11435:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1274,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "showPlayersGames",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1263,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1274,
+                  "src": "11375:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11375:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11374:18:1"
+            },
+            "returnParameters": {
+              "id": 1268,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1267,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1274,
+                  "src": "11413:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1265,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "11413:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 1266,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "11413:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11412:15:1"
+            },
+            "scope": 1275,
+            "src": "11349:124:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1263,
-        "src": "2156:9192:1"
+        "scope": 1276,
+        "src": "2156:9321:1"
       }
     ],
-    "src": "0:11349:1"
+    "src": "0:11478:1"
   },
   "compiler": {
     "name": "solc",
@@ -32207,7 +32495,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2020-03-31T09:11:53.174Z",
+  "updatedAt": "2020-04-02T09:07:44.194Z",
   "devdoc": {
     "methods": {}
   },

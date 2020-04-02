@@ -12,6 +12,18 @@
     <button id="rm-button" mat-raised-button color="warn" (click)="removeBet()">Remove selection</button>
 
     <button id="bet-button" mat-raised-button color="primary" (click)="makeBet()">Make a bet!</button>
+
+    <mat-list id="prev-winners" role="list">
+        <mat-list-item role="listitem">
+            <h3>My Current Bets:</h3>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <mat-list-item *ngFor="let bet of current_bets" role="listitem">
+            {{ bet | lowercase}}
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
 </div>
 
 
@@ -58,7 +70,7 @@
 
 <!-- This view only gets displayed if user is owner of an account-->
 <div id="owner-container" *ngIf="ownership">
-    <!--<mat-toolbar color="primary" class="center">Owner Dashboard</mat-toolbar>-->
+    <mat-toolbar color="primary" class="center">Owner Dashboard</mat-toolbar>
     <mat-card id="owner-balance">
         <h3>Balance:</h3> {{ owner_balance }} ETH
     </mat-card>
