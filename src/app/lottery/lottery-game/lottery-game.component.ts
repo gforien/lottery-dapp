@@ -87,6 +87,16 @@ export class LotteryGameComponent implements OnInit {
     });
   }
 
+  removeNumFromArray(value){
+    
+    // TODO: remove number from array
+    for(var i = 0; i < this.selected_numbers.length; i++){
+      if (this.selected_numbers[i] === value){
+        this.selected_numbers.splice(i, 1);
+      }
+    }
+  }
+
   //TODO put it in order and implement the second click to remove only the number clicked
   onSelect($event, number) {
 
@@ -97,7 +107,20 @@ export class LotteryGameComponent implements OnInit {
       $event.target.style.background = 'gray';
 
       this.selected_numbers.push(number);
+
+      // sort numbers
+      this.selected_numbers.sort(function(a, b){return a - b});
     }
+    else{
+      if(this.selected_numbers.includes(number)){
+
+      this.removeNumFromArray(number);
+
+      // recolor to the original
+      $event.target.style.background = 'lightblue';
+    }
+    }
+    
   }
 
   setStatus(status) {
@@ -126,8 +149,6 @@ export class LotteryGameComponent implements OnInit {
     }
 
   }
-
-
 
   async postGame(){
 
