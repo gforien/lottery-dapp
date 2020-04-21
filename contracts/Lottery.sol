@@ -185,9 +185,29 @@ contract Lottery is Ownable{
 
 
 
-    //TODO the entiry function
+
     function getEntropy() private returns(uint){
 
+        //Uncomment this secction to get real entropy 
+        /*
+
+        uint[] memory numbers = showWinnersGame();
+
+        uint added = 0;
+
+        for(uint i=0;i<numbers.length;i++){
+
+            added += numbers[i];
+        }
+
+
+        uint entropy = uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty,added)));
+
+        return entropy;
+
+        */
+
+        //[2,10,18,19,20,22,27,29] for 32 winning game for entropy 1;
         return 1;
 
     }
