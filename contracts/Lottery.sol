@@ -186,18 +186,17 @@ contract Lottery is Ownable{
 
 
 
-    function getEntropy() private returns(uint){
+    function getEntropy() private view returns(uint){
 
-        //Uncomment this secction to get real entropy 
-        /*
+        //Uncomment this secction to get real entropy
 
-        uint[] memory numbers = showWinnersGame();
+
 
         uint added = 0;
 
-        for(uint i=0;i<numbers.length;i++){
+        for(uint i=0;i<winnersGameList.length;i++){
 
-            added += numbers[i];
+            added += winnersGameList[i];
         }
 
 
@@ -205,10 +204,10 @@ contract Lottery is Ownable{
 
         return entropy;
 
-        */
+
 
         //[2,10,18,19,20,22,27,29] for 32 winning game for entropy 1;
-        return 1;
+        //return 1;
 
     }
 
@@ -339,7 +338,7 @@ contract Lottery is Ownable{
         winnerGame = _winnerGame;
     }*/
 
-    function checkIfGameIsWin(uint[qntNumbers] memory _winnerGame ,uint[] memory _gameArray, uint _start,uint _end) private returns(bool){
+    function checkIfGameIsWin(uint[qntNumbers] memory _winnerGame ,uint[] memory _gameArray, uint _start,uint _end) private pure returns(bool){
 
 
 
@@ -364,7 +363,7 @@ contract Lottery is Ownable{
 
     }
 
-    function searchWinGameInArray(uint[qntNumbers] memory __winnerGame, uint[] memory __gameArray ) private returns(bool){
+    function searchWinGameInArray(uint[qntNumbers] memory __winnerGame, uint[] memory __gameArray ) private pure returns(bool){
 
         uint nbGamesTotal = __gameArray.length/qntNumbers;
 
