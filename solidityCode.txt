@@ -1,0 +1,11 @@
+SafeMath is a library. It's used to ensure there is not overflow errors.
+Ownable is a contract in which Lottery is going to heritage from. It is a standard in the field to do so. Ownable makes the Lottery contract "ownable" by the address that deploys it. The modifier "onlyOwner" is applied in some fonctions and are only xecuted by the owner.
+
+The variable "addressToGame" is a mapping that takes as parameter an address and gives a array of integers of variable size The mapping in solidity is like a dictionary in python). A valid game is composed by 8 numbers. For exemple if I make addressToGame[0x46eAAe90b871b55C3222B443378708283055e284] and I get a 16 length array, this means this address 0x46eAAe90b871b55C3222B443378708283055e284 has 2 valid games. When I post a game, it first verifies if the amount sent to the contract is enougth (modifier "cost(price)"), then updates the database (variable "addressToGame") Then it checks if the time to new round is zero, if it is, it will compute the lottery logic (function "playRound")
+
+Function "playRound" is explained in the diagram. Go to the site: https://app.diagrams.net/ and then open the file "playRoundFunction.drawio" 
+
+Important thing in solidity:
+- "require" and "assert" is for error handling: if is not true, it throws an error and stops the execution.
+-public and private is used to describe functions. Some privates functions are not important for thhe understanding of the code that's why they are not explained in details, they usually executes a simple task easy to understand. 
+-"view" functions are functions that do not change the state of the blockchain, just query it. 
